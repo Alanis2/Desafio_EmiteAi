@@ -4,16 +4,12 @@ import br.com.emiteai.shop.repository.ordemTransporte.OrdemTransporteRepository;
 import br.com.emiteai.shop.repository.ordemTransporte.model.OrdemTransporte;
 import br.com.emiteai.shop.repository.pedidos.PedidosRepository;
 import br.com.emiteai.shop.repository.pedidos.model.Pedidos;
-import br.com.emiteai.shop.service.ordemTransporte.dto.OrdemTransporteDto;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import java.sql.Timestamp;
-import java.time.Instant;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Service

@@ -1,6 +1,5 @@
 package br.com.emiteai.shop.mapper;
 
-import br.com.emiteai.shop.controller.pedidos.dto.PedidosRequest;
 import br.com.emiteai.shop.controller.pedidos.dto.PedidosResponse;
 import br.com.emiteai.shop.repository.pedidos.model.Pedidos;
 import org.mapstruct.Mapper;

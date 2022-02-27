@@ -2,16 +2,14 @@ package br.com.emiteai.shop.service.pedidos;
 
 import br.com.emiteai.shop.controller.pedidos.dto.PedidosRequest;
 import br.com.emiteai.shop.controller.pedidos.dto.PedidosResponse;
+import br.com.emiteai.shop.exception.BadRequestException;
 import br.com.emiteai.shop.mapper.PedidoMapper;
 import br.com.emiteai.shop.repository.pedidos.PedidosRepository;
 import br.com.emiteai.shop.repository.pedidos.model.Pedidos;
 import br.com.emiteai.shop.repository.produtos.ProdutosRepository;
 import br.com.emiteai.shop.repository.produtos.model.Produtos;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,7 +25,7 @@ public class PedidosService {
         Pedidos pedido = new Pedidos();
 
         if (pedidosRequest.getIdProdutos().size() < 1){
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Para realizar a requisição, precisa ter no mínimo um produto ");
+            throw new BadRequestException("Para realizar a requisição, precisa ter no mínimo um produto");
         }
 
         List<Produtos> produtos = produtosRepository.findAllById(pedidosRequest.getIdProdutos());

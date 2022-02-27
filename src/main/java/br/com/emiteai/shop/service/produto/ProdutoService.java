@@ -5,12 +5,14 @@ import br.com.emiteai.shop.controller.produtos.dto.ProdutosResponse;
 import br.com.emiteai.shop.mapper.ProdutoMapper;
 import br.com.emiteai.shop.repository.produtos.ProdutosRepository;
 import br.com.emiteai.shop.repository.produtos.model.Produtos;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class ProdutoService {
 
-    private ProdutosRepository produtosRepository;
+    private final ProdutosRepository produtosRepository;
 
     public ProdutosResponse save(ProdutosRequest produtosRequest){
         Produtos produtos = ProdutoMapper.INSTANCE.toPedido(produtosRequest);

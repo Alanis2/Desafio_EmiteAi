@@ -5,8 +5,6 @@ import br.com.emiteai.shop.controller.produtos.dto.ProdutosResponse;
 import br.com.emiteai.shop.service.produto.ProdutoService;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
