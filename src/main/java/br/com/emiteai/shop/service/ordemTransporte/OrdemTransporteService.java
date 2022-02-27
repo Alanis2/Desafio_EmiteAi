@@ -24,7 +24,7 @@ public class OrdemTransporteService {
     private PedidosRepository pedidosRepository;
     private OrdemTransporteRepository ordemTransporteRepository;
 
-    @Scheduled(fixedDelay = 1000 * 60 * 1)
+    @Scheduled(fixedDelay = 1000 * 60 * 10)
     public void gerarOrdemDeTranporte() {
         // TODO buscar todos os pedidos sem vinculo com ordem de transporte
 
